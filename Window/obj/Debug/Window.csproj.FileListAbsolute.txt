@@ -1,0 +1,7 @@
+E:\Window\Window\Window\bin\Debug\Window.dll
+E:\Window\Window\Window\bin\Debug\Window.pdb
+E:\Window\Window\Window\bin\Debug\KAPITypes.dll
+E:\Window\Window\Window\obj\Debug\Window.csprojResolveAssemblyReference.cache
+E:\Window\Window\Window\obj\Debug\Window.csproj.ResolveComReference.cache
+E:\Window\Window\Window\obj\Debug\Window.dll
+E:\Window\Window\Window\obj\Debug\Window.pdb
