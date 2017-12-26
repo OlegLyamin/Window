@@ -9,12 +9,12 @@ namespace GUI
     internal class Kompas
     {
         /// <summary>
-        /// 
+        /// объект компас
         /// </summary>
         public KompasObject _Kompas;
 
         /// <summary>
-        /// 
+        /// метод для построения окна в компасе
         /// </summary>
         /// <param name="window"></param>
         public void BuildWindow(WindowParametrs window)
@@ -68,7 +68,7 @@ namespace GUI
         }
 
         /// <summary>
-        /// 
+        /// метод построения первой открываемой секции
         /// </summary>
         /// <param name="window"></param>
         /// <param name="height"></param>
@@ -175,7 +175,7 @@ namespace GUI
         }
 
         /// <summary>
-        /// 
+        /// метод построения ручки слева для первой открываемой секции
         /// </summary>
         /// <param name="window"></param>
         /// <param name="width"></param>
@@ -246,7 +246,7 @@ namespace GUI
         }
 
         /// <summary>
-        /// 
+        /// метод построения ручки справа для первой открываемой секции
         /// </summary>
         /// <param name="window"></param>
         /// <param name="width"></param>
@@ -317,7 +317,7 @@ namespace GUI
         }
 
         /// <summary>
-        /// 
+        /// построение первой секции
         /// </summary>
         /// <param name="height"></param>
         /// <param name="width"></param>
@@ -393,7 +393,7 @@ namespace GUI
         }
 
         /// <summary>
-        /// 
+        /// метод построения 4 секции
         /// </summary>
         /// <param name="window"></param>
         /// <param name="offset"></param>
@@ -481,7 +481,7 @@ namespace GUI
         }
 
         /// <summary>
-        /// 
+        /// метод отображения открываемой 4 секции
         /// </summary>
         /// <param name="window"></param>
         /// <param name="offset"></param>
@@ -588,7 +588,7 @@ namespace GUI
         }
 
         /// <summary>
-        /// 
+        /// метод построения ручки справа для 4 секции
         /// </summary>
         /// <param name="window"></param>
         /// <param name="offset"></param>
@@ -661,7 +661,7 @@ namespace GUI
         }
 
         /// <summary>
-        /// 
+        /// метод построения ручки слева для 4 секции
         /// </summary>
         /// <param name="window"></param>
         /// <param name="width"></param>
@@ -733,7 +733,7 @@ namespace GUI
         }
 
         /// <summary>
-        /// 
+        /// метод построения 3 секции
         /// </summary>
         /// <param name="window"></param>
         /// <param name="offset"></param>
@@ -821,7 +821,7 @@ namespace GUI
         }
 
         /// <summary>
-        /// 
+        /// метод отображения открытой 3 секции
         /// </summary>
         /// <param name="window"></param>
         /// <param name="offset"></param>
@@ -926,7 +926,7 @@ namespace GUI
         }
 
         /// <summary>
-        /// 
+        /// метод построения ручки справа для 3 секции
         /// </summary>
         /// <param name="window"></param>
         /// <param name="offset"></param>
@@ -998,7 +998,7 @@ namespace GUI
         }
 
         /// <summary>
-        /// 
+        /// метод отображения ручки слева для 3 секции
         /// </summary>
         /// <param name="window"></param>
         /// <param name="width"></param>
@@ -1068,7 +1068,7 @@ namespace GUI
         }
 
         /// <summary>
-        /// 
+        /// метод построения 2 секции
         /// </summary>
         /// <param name="window"></param>
         /// <param name="offset"></param>
@@ -1157,7 +1157,7 @@ namespace GUI
         }
 
         /// <summary>
-        /// 
+        /// метод отображения второй открываемой секции
         /// </summary>
         /// <param name="window"></param>
         /// <param name="offset"></param>
@@ -1262,7 +1262,7 @@ namespace GUI
         }
 
         /// <summary>
-        /// 
+        /// метод построения ручки справа для 2 секции
         /// </summary>
         /// <param name="window"></param>
         /// <param name="offset"></param>
@@ -1333,7 +1333,7 @@ namespace GUI
         }
 
         /// <summary>
-        /// 
+        /// метод построения ручки слева для 2 секции
         /// </summary>
         /// <param name="window"></param>
         /// <param name="width"></param>
@@ -1432,7 +1432,7 @@ namespace GUI
         }
 
         /// <summary>
-        /// 
+        /// метод выдавливания фигуры
         /// </summary>
         /// <param name="part"></param>
         /// <param name="sketch"></param>
@@ -1454,7 +1454,7 @@ namespace GUI
         }
 
         /// <summary>
-        /// 
+        /// метод выреза фигуры
         /// </summary>
         /// <param name="part"></param>
         /// <param name="sketch"></param>
@@ -1476,7 +1476,7 @@ namespace GUI
         }
 
         /// <summary>
-        /// 
+        /// метод для запуска и открытия компаса в одном окне
         /// </summary>
         private void StartAndConnectToKompas()
         {

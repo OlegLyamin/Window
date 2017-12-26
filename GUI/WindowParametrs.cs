@@ -5,27 +5,27 @@ namespace GUI
     class WindowParametrs
     {
         /// <summary>
-        /// 
+        /// объект высоты
         /// </summary>
         private int _lengthHeight;
 
         /// <summary>
-        /// 
+        /// объект ширины
         /// </summary>
         private int _lengthWidth;
 
         /// <summary>
-        /// 
+        /// объект толщины
         /// </summary>
         private int _lengthWeight;
 
         /// <summary>
-        /// 
+        /// объект номера секции
         /// </summary>
         private int _sectionNumber;
 
         /// <summary>
-        /// 
+        /// объект номера открываемой секции
         /// </summary>
         private int _opensection;
 
@@ -35,7 +35,7 @@ namespace GUI
         private HandlePosition _handlePosition;
 
         /// <summary>
-        /// 
+        /// геттер сеттер высоты
         /// </summary>
         public int LengthHeight
         {
@@ -52,7 +52,7 @@ namespace GUI
         }
 
         /// <summary>
-        /// 
+        /// геттер сеттер ширины
         /// </summary>
         public int LengthWidth
         {
@@ -69,7 +69,7 @@ namespace GUI
         }
 
         /// <summary>
-        /// 
+        /// геттер сеттер толщины
         /// </summary>
         public int LengthWeight
         {
@@ -104,7 +104,7 @@ namespace GUI
         }
 
         /// <summary>
-        /// Геттер сеттер открытой секции
+        /// Геттер сеттер открываемой секции
         /// </summary>
         public int OpenSection
         {
