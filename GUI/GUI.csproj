@@ -61,6 +61,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CoordinatesGrid.cs" />
     <Compile Include="HandlePosition.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
