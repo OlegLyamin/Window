@@ -20,21 +20,6 @@ namespace GUI
         private int _lengthWeight;
 
         /// <summary>
-        /// объект номера секции
-        /// </summary>
-        private int _sectionNumber;
-
-        /// <summary>
-        /// объект номера открываемой секции
-        /// </summary>
-        private int _opensection;
-
-        /// <summary>
-        /// 
-        /// </summary>
-        private HandlePosition _handlePosition;
-
-        /// <summary>
         /// геттер сеттер высоты
         /// </summary>
         public int LengthHeight
@@ -88,37 +73,25 @@ namespace GUI
         /// <summary>
         /// Геттер сеттер номера секции
         /// </summary>
-        public int SectionNumber
-        {
-            get { return _sectionNumber; }
-            set { _sectionNumber = value; }
-        }
+        public int SectionNumber { get; set; }
 
         /// <summary>
         /// Геттер сеттер положения ручки
         /// </summary>
-        public HandlePosition HandlePosition
-        {
-            get { return _handlePosition; }
-            set { _handlePosition = value; }
-        }
+        public HandlePosition HandlePosition { get; set; }
 
         /// <summary>
         /// Геттер сеттер открываемой секции
         /// </summary>
-        public int OpenSection
-        {
-            get { return _opensection; }
-            set { _opensection = value; }
-        }
+        public int OpenSection { get; set; }
 
         /// <summary>
-        /// Переприсвоение
+        /// создание экземпляров 
         /// </summary>
-        /// <param name="lengthHeight"></param>
-        /// <param name="lengthWidth"></param>
-        /// <param name="lengthWeight"></param>
-        /// <param name="sectionNumber"></param>
+        /// <param name="lengthHeight">высота</param>
+        /// <param name="lengthWidth">ширина</param>
+        /// <param name="lengthWeight">толщина</param>
+        /// <param name="sectionNumber">номер секции</param>
         /// <param name="opensection"></param>
         public WindowParametrs(int lengthHeight, int lengthWidth,
             int lengthWeight, int sectionNumber, int opensection)

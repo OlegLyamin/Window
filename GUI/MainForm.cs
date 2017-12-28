@@ -43,13 +43,15 @@ namespace GUI
         /// <param name="e"></param>
         private void Build_window_Click(object sender, EventArgs e)
         {
-            var window = new WindowParametrs();
+            var window = new WindowParametrs
+            {
+                SectionNumber = Convert.ToInt32(Section.SelectedItem),
+                OpenSection = Convert.ToInt32(OpenSection.SelectedItem),
+                LengthWidth = Convert.ToInt32(Width.Value),
+                LengthHeight = Convert.ToInt32(Height.Value),
+                LengthWeight = Convert.ToInt32(Weight.Value)
+            };
 
-            window.SectionNumber = Convert.ToInt32(Section.SelectedItem);
-            window.OpenSection = Convert.ToInt32(OpenSection.SelectedItem);
-            window.LengthWidth = Convert.ToInt32(Width.Value);
-            window.LengthHeight = Convert.ToInt32(Height.Value);
-            window.LengthWeight = Convert.ToInt32(Weight.Value);
 
             if (Left.Checked)
             {

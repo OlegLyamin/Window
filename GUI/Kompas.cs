@@ -6,12 +6,15 @@ using Kompas6Constants3D;
 
 namespace GUI
 {
+    /// <summary>
+    /// 
+    /// </summary>
     internal class Kompas
     {
         /// <summary>
         /// объект компас
         /// </summary>
-        public KompasObject _Kompas;
+        private KompasObject _kompas;
 
         /// <summary>
         /// метод для построения окна в компасе
@@ -21,7 +24,7 @@ namespace GUI
         {
             StartAndConnectToKompas();
 
-            if (_Kompas == null)
+            if (_kompas == null)
             {
                 throw new Exception("Не возможно построить" +
                                     " деталь. Нет связи с Kompas.");
@@ -332,7 +335,7 @@ namespace GUI
             var xStartStepFirstSectionExtrude = -width / 2.0;
             var yStartStepFirstSectionExtrude = -height / 2.0;
 
-            ksDocument3D document = _Kompas.Document3D();
+            ksDocument3D document = _kompas.Document3D();
             document.Create();
             windowPart = document.GetPart((short)
                 Part_Type.pTop_Part);
@@ -1416,7 +1419,7 @@ namespace GUI
             double width, double? ang)
         {
             var param =
-                (ksRectangleParam) _Kompas.GetParamStruct((short) 
+                (ksRectangleParam) _kompas.GetParamStruct((short) 
                 StructType2DEnum.ko_RectangleParam);
 
             param.x = xStart;
@@ -1482,25 +1485,25 @@ namespace GUI
         {
             try
             {
-                if (_Kompas != null)
+                if (_kompas != null)
                 {
-                    _Kompas.Visible = true;
-                    _Kompas.ActivateControllerAPI();
+                    _kompas.Visible = true;
+                    _kompas.ActivateControllerAPI();
                 }
 
-                if (_Kompas == null)
+                if (_kompas == null)
                 {
                     var t = Type.GetTypeFromProgID("KOMPAS.Application.5");
-                    _Kompas = (KompasObject) Activator.CreateInstance(t);
+                    _kompas = (KompasObject) Activator.CreateInstance(t);
 
                     StartAndConnectToKompas();
 
-                    if (_Kompas == null) throw new Exception("Нет связи с Kompas3D.");
+                    if (_kompas == null) throw new Exception("Нет связи с Kompas3D.");
                 }
             }
             catch (COMException)
             {
-                _Kompas = null;
+                _kompas = null;
                 StartAndConnectToKompas();
             }
         }
