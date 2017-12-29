@@ -109,9 +109,11 @@ namespace GUI
         {
             return new Dictionary<string, double>
             {
-                {"xStartExtrude", -_windowsParametrs.LengthWidth - _windowsParametrs.LengthWidth / 2},
+                {"xStartExtrude", -_windowsParametrs.LengthWidth 
+                - _windowsParametrs.LengthWidth / 2},
                 {"yStartExtrude", -_windowsParametrs.LengthHeight / 2.0},
-                {"xStartNotch", -_windowsParametrs.LengthWidth - _windowsParametrs.LengthWidth / 2 + _offset},
+                {"xStartNotch", -_windowsParametrs.LengthWidth 
+                - _windowsParametrs.LengthWidth / 2 + _offset},
                 {"yStartNotch", -_windowsParametrs.LengthHeight / 2 + 20}
             };
         }
@@ -140,25 +142,40 @@ namespace GUI
             var handleCoordinations = new Dictionary<string, double>();
             var openSectionCorrdinations = InitOpenSection();
 
-            handleCoordinations.Add("yStartPartOne", _windowsParametrs.LengthHeight / 100 * 1);
-            handleCoordinations.Add("WidthPartOne", _windowsParametrs.LengthWidth / 100 * 1);
-            handleCoordinations.Add("HeigthPartOne", _windowsParametrs.LengthWidth / 100 * 1);
-            handleCoordinations.Add("WeigthPartOne", openSectionCorrdinations["weigthSectionNotch"] / 100 * 10);
+            handleCoordinations.Add("yStartPartOne", 
+                _windowsParametrs.LengthHeight / 100 * 1);
+            handleCoordinations.Add("WidthPartOne",
+                _windowsParametrs.LengthWidth / 100 * 1);
+            handleCoordinations.Add("HeigthPartOne",
+                _windowsParametrs.LengthWidth / 100 * 1);
+            handleCoordinations.Add("WeigthPartOne",
+                openSectionCorrdinations["weigthSectionNotch"] / 100 * 10);
 
-            handleCoordinations.Add("yStartPartTwo", _windowsParametrs.LengthHeight / 100.0 * 0.5);
-            handleCoordinations.Add("WidthPartTwo", _windowsParametrs.LengthWidth / 100 * 10);
-            handleCoordinations.Add("HeigthPartTwo", _windowsParametrs.LengthWidth / 100 * 2);
-            handleCoordinations.Add("WeigthPartTwo", openSectionCorrdinations["weigthSectionNotch"]/100* 5);
+            handleCoordinations.Add("yStartPartTwo",
+                _windowsParametrs.LengthHeight / 100.0 * 0.5);
+            handleCoordinations.Add("WidthPartTwo", 
+                _windowsParametrs.LengthWidth / 100 * 10);
+            handleCoordinations.Add("HeigthPartTwo",
+                _windowsParametrs.LengthWidth / 100 * 2);
+            handleCoordinations.Add("WeigthPartTwo", 
+                openSectionCorrdinations["weigthSectionNotch"]/100* 5);
 
             switch (_windowsParametrs.HandlePosition)
             {
                 case HandlePosition.Right:
-                    handleCoordinations.Add("xStartPartOne", openSectionCorrdinations["xStartExtrude"] + _offset / 4.0);
-                    handleCoordinations.Add("xStartPartTwo", openSectionCorrdinations["xStartExtrude"]);
+                    handleCoordinations.Add("xStartPartOne", 
+                        openSectionCorrdinations["xStartExtrude"]
+                            + _offset / 4.0);
+                    handleCoordinations.Add("xStartPartTwo",
+                        openSectionCorrdinations["xStartExtrude"]);
                     break;
                 case HandlePosition.Left:
-                    handleCoordinations.Add("xStartPartOne", openSectionCorrdinations["xStartExtrude"] / 2 - _offset * 2);
-                    handleCoordinations.Add("xStartPartTwo", openSectionCorrdinations["xStartExtrude"] / 2 - _offset * 4);
+                    handleCoordinations.Add("xStartPartOne", 
+                        openSectionCorrdinations["xStartExtrude"] / 2 
+                            - _offset * 2);
+                    handleCoordinations.Add("xStartPartTwo", 
+                        openSectionCorrdinations["xStartExtrude"] / 2 
+                            - _offset * 4);
                     break;
             }
             
@@ -175,48 +192,86 @@ namespace GUI
             switch (_windowsParametrs.OpenSection)
             {
                 case 1:
-                    openSectionCoordinations.Add("xStartExtrude", -_windowsParametrs.LengthWidth / 2 + _offset);
-                    openSectionCoordinations.Add("yStartExtrude", -_windowsParametrs.LengthHeight / 2 + _offset);
-                    openSectionCoordinations.Add("xStartNotch", -_windowsParametrs.LengthWidth / 2 + _offset * 2);
-                    openSectionCoordinations.Add("yStartNotch", -_windowsParametrs.LengthHeight / 2 + _offset * 2);
-                    openSectionCoordinations.Add("widthSectionExtrude", _windowsParametrs.LengthWidth / 2 - _offset * 2);
-                    openSectionCoordinations.Add("heighSectionExtrude", _windowsParametrs.LengthHeight - _offset * 2);
-                    openSectionCoordinations.Add("widthSectionNotch", _windowsParametrs.LengthWidth / 2 - _offset * 4);
-                    openSectionCoordinations.Add("heightSectionNotch", _windowsParametrs.LengthHeight - _offset * 4);
-                    openSectionCoordinations.Add("weigthSectionNotch", _windowsParametrs.LengthWeight);
+                    openSectionCoordinations.Add("xStartExtrude",
+                        -_windowsParametrs.LengthWidth / 2 + _offset);
+                    openSectionCoordinations.Add("yStartExtrude",
+                        -_windowsParametrs.LengthHeight / 2 + _offset);
+                    openSectionCoordinations.Add("xStartNotch",
+                        -_windowsParametrs.LengthWidth / 2 + _offset * 2);
+                    openSectionCoordinations.Add("yStartNotch", 
+                        -_windowsParametrs.LengthHeight / 2 + _offset * 2);
+                    openSectionCoordinations.Add("widthSectionExtrude",
+                        _windowsParametrs.LengthWidth / 2 - _offset * 2);
+                    openSectionCoordinations.Add("heighSectionExtrude",
+                        _windowsParametrs.LengthHeight - _offset * 2);
+                    openSectionCoordinations.Add("widthSectionNotch",
+                        _windowsParametrs.LengthWidth / 2 - _offset * 4);
+                    openSectionCoordinations.Add("heightSectionNotch",
+                        _windowsParametrs.LengthHeight - _offset * 4);
+                    openSectionCoordinations.Add("weigthSectionNotch",
+                        _windowsParametrs.LengthWeight);
                     break;
                 case 2:
-                    openSectionCoordinations.Add("xStartExtrude", -_windowsParametrs.LengthWidth + _offset);
-                    openSectionCoordinations.Add("yStartExtrude", -_windowsParametrs.LengthHeight / 2 + _offset);
-                    openSectionCoordinations.Add("xStartNotch", -_windowsParametrs.LengthWidth + _offset * 2);
-                    openSectionCoordinations.Add("yStartNotch", -_windowsParametrs.LengthHeight / 2 + _offset * 2);
-                    openSectionCoordinations.Add("widthSectionExtrude", _windowsParametrs.LengthWidth / 2 - _offset * 2);
-                    openSectionCoordinations.Add("heighSectionExtrude", _windowsParametrs.LengthHeight - _offset * 2);
-                    openSectionCoordinations.Add("widthSectionNotch", _windowsParametrs.LengthWidth / 2 - _offset * 4);
-                    openSectionCoordinations.Add("heightSectionNotch", _windowsParametrs.LengthHeight - _offset * 4);
-                    openSectionCoordinations.Add("weigthSectionNotch", _windowsParametrs.LengthWeight + _offset + 4);
+                    openSectionCoordinations.Add("xStartExtrude", 
+                        -_windowsParametrs.LengthWidth + _offset);
+                    openSectionCoordinations.Add("yStartExtrude",
+                        -_windowsParametrs.LengthHeight / 2 + _offset);
+                    openSectionCoordinations.Add("xStartNotch",
+                        -_windowsParametrs.LengthWidth + _offset * 2);
+                    openSectionCoordinations.Add("yStartNotch",
+                        -_windowsParametrs.LengthHeight / 2 + _offset * 2);
+                    openSectionCoordinations.Add("widthSectionExtrude",
+                        _windowsParametrs.LengthWidth / 2 - _offset * 2);
+                    openSectionCoordinations.Add("heighSectionExtrude",
+                        _windowsParametrs.LengthHeight - _offset * 2);
+                    openSectionCoordinations.Add("widthSectionNotch",
+                        _windowsParametrs.LengthWidth / 2 - _offset * 4);
+                    openSectionCoordinations.Add("heightSectionNotch",
+                        _windowsParametrs.LengthHeight - _offset * 4);
+                    openSectionCoordinations.Add("weigthSectionNotch",
+                        _windowsParametrs.LengthWeight + _offset + 4);
                     break;
                 case 3:
-                    openSectionCoordinations.Add("xStartExtrude", -_windowsParametrs.LengthWidth - _windowsParametrs.LengthWidth / 2 + _offset);
-                    openSectionCoordinations.Add("yStartExtrude", -_windowsParametrs.LengthHeight / 2 + _offset);
-                    openSectionCoordinations.Add("xStartNotch", -_windowsParametrs.LengthWidth - _windowsParametrs.LengthWidth / 2 + _offset * 2);
-                    openSectionCoordinations.Add("yStartNotch", -_windowsParametrs.LengthHeight / 2 + _offset * 2);
-                    openSectionCoordinations.Add("widthSectionExtrude", _windowsParametrs.LengthWidth / 2 - _offset * 2);
-                    openSectionCoordinations.Add("heighSectionExtrude", _windowsParametrs.LengthHeight - _offset * 2);
-                    openSectionCoordinations.Add("widthSectionNotch", _windowsParametrs.LengthWidth / 2 - _offset * 4);
-                    openSectionCoordinations.Add("heightSectionNotch", _windowsParametrs.LengthHeight - _offset * 4);
-                    openSectionCoordinations.Add("weigthSectionNotch", _windowsParametrs.LengthWeight + _offset + 4);
+                    openSectionCoordinations.Add("xStartExtrude", 
+                        -_windowsParametrs.LengthWidth
+                            - _windowsParametrs.LengthWidth / 2 + _offset);
+                    openSectionCoordinations.Add("yStartExtrude",
+                        -_windowsParametrs.LengthHeight / 2 + _offset);
+                    openSectionCoordinations.Add("xStartNotch",
+                        -_windowsParametrs.LengthWidth 
+                          - _windowsParametrs.LengthWidth / 2 + _offset * 2);
+                    openSectionCoordinations.Add("yStartNotch",
+                        -_windowsParametrs.LengthHeight / 2 + _offset * 2);
+                    openSectionCoordinations.Add("widthSectionExtrude",
+                        _windowsParametrs.LengthWidth / 2 - _offset * 2);
+                    openSectionCoordinations.Add("heighSectionExtrude",
+                        _windowsParametrs.LengthHeight - _offset * 2);
+                    openSectionCoordinations.Add("widthSectionNotch",
+                        _windowsParametrs.LengthWidth / 2 - _offset * 4);
+                    openSectionCoordinations.Add("heightSectionNotch",
+                        _windowsParametrs.LengthHeight - _offset * 4);
+                    openSectionCoordinations.Add("weigthSectionNotch",
+                        _windowsParametrs.LengthWeight + _offset + 4);
                     break;
                 case 4:
-                    openSectionCoordinations.Add("xStartExtrude", -_windowsParametrs.LengthWidth * 2 + _offset);
-                    openSectionCoordinations.Add("yStartExtrude", -_windowsParametrs.LengthHeight / 2 + _offset);
-                    openSectionCoordinations.Add("xStartNotch", -_windowsParametrs.LengthWidth * 2 + _offset * 2);
-                    openSectionCoordinations.Add("yStartNotch", -_windowsParametrs.LengthHeight / 2 + _offset * 2);
-                    openSectionCoordinations.Add("widthSectionExtrude", _windowsParametrs.LengthWidth / 2 - _offset * 2);
-                    openSectionCoordinations.Add("heighSectionExtrude", _windowsParametrs.LengthHeight - _offset * 2);
-                    openSectionCoordinations.Add("widthSectionNotch", _windowsParametrs.LengthWidth / 2 - _offset * 4);
-                    openSectionCoordinations.Add("heightSectionNotch", _windowsParametrs.LengthHeight - _offset * 4);
-                    openSectionCoordinations.Add("weigthSectionNotch", _windowsParametrs.LengthWeight + _offset + 4);
+                    openSectionCoordinations.Add("xStartExtrude",
+                        -_windowsParametrs.LengthWidth * 2 + _offset);
+                    openSectionCoordinations.Add("yStartExtrude",
+                        -_windowsParametrs.LengthHeight / 2 + _offset);
+                    openSectionCoordinations.Add("xStartNotch",
+                        -_windowsParametrs.LengthWidth * 2 + _offset * 2);
+                    openSectionCoordinations.Add("yStartNotch",
+                        -_windowsParametrs.LengthHeight / 2 + _offset * 2);
+                    openSectionCoordinations.Add("widthSectionExtrude",
+                        _windowsParametrs.LengthWidth / 2 - _offset * 2);
+                    openSectionCoordinations.Add("heighSectionExtrude",
+                        _windowsParametrs.LengthHeight - _offset * 2);
+                    openSectionCoordinations.Add("widthSectionNotch",
+                        _windowsParametrs.LengthWidth / 2 - _offset * 4);
+                    openSectionCoordinations.Add("heightSectionNotch",
+                        _windowsParametrs.LengthHeight - _offset * 4);
+                    openSectionCoordinations.Add("weigthSectionNotch",
+                        _windowsParametrs.LengthWeight + _offset + 4);
                     break;
             }
 

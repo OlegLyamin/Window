@@ -33,3 +33,15 @@ C:\Users\slido\Desktop\flash\ОРСАПР\OLEG\Window\GUI\obj\Debug\GUI.csproj.G
 C:\Users\slido\Desktop\flash\ОРСАПР\OLEG\Window\GUI\obj\Debug\GUI.csproj.CoreCompileInputs.cache
 C:\Users\slido\Desktop\flash\ОРСАПР\OLEG\Window\GUI\obj\Debug\GUI.exe
 C:\Users\slido\Desktop\flash\ОРСАПР\OLEG\Window\GUI\obj\Debug\GUI.pdb
+F:\Window\GUI\bin\Debug\GUI.exe.config
+F:\Window\GUI\obj\Debug\Interop.Kompas6API5.dll
+F:\Window\GUI\obj\Debug\Interop.Kompas6Constants3D.dll
+F:\Window\GUI\obj\Debug\GUI.csproj.ResolveComReference.cache
+F:\Window\GUI\obj\Debug\GUI.exe
+F:\Window\GUI\obj\Debug\GUI.pdb
+D:\ОРСАПР_лаба\Window\GUI\bin\Debug\GUI.exe.config
+D:\ОРСАПР_лаба\Window\GUI\obj\Debug\Interop.Kompas6API5.dll
+D:\ОРСАПР_лаба\Window\GUI\obj\Debug\Interop.Kompas6Constants3D.dll
+D:\ОРСАПР_лаба\Window\GUI\obj\Debug\GUI.csproj.ResolveComReference.cache
+D:\ОРСАПР_лаба\Window\GUI\obj\Debug\GUI.exe
+D:\ОРСАПР_лаба\Window\GUI\obj\Debug\GUI.pdb
