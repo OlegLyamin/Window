@@ -45,3 +45,12 @@ D:\ОРСАПР_лаба\Window\GUI\obj\Debug\Interop.Kompas6Constants3D.dll
 D:\ОРСАПР_лаба\Window\GUI\obj\Debug\GUI.csproj.ResolveComReference.cache
 D:\ОРСАПР_лаба\Window\GUI\obj\Debug\GUI.exe
 D:\ОРСАПР_лаба\Window\GUI\obj\Debug\GUI.pdb
+D:\ОРСАПР_лаба\Window\GUI\bin\Debug\GUI.exe
+D:\ОРСАПР_лаба\Window\GUI\bin\Debug\GUI.pdb
+D:\ОРСАПР_лаба\Window\GUI\bin\Debug\KAPITypes.dll
+D:\ОРСАПР_лаба\Window\GUI\bin\Debug\nunit.framework.dll
+D:\ОРСАПР_лаба\Window\GUI\bin\Debug\nunit.framework.xml
+D:\ОРСАПР_лаба\Window\GUI\obj\Debug\GUI.csprojResolveAssemblyReference.cache
+D:\ОРСАПР_лаба\Window\GUI\obj\Debug\GUI.MainForm.resources
+D:\ОРСАПР_лаба\Window\GUI\obj\Debug\GUI.Properties.Resources.resources
+D:\ОРСАПР_лаба\Window\GUI\obj\Debug\GUI.csproj.GenerateResource.Cache

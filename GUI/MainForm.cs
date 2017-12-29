@@ -152,6 +152,8 @@ namespace GUI
                 Left.Enabled = true;
                 Right.Enabled = true;
             }
+            Left.Checked = false;
+            Right.Checked = true;
         }
 
         /// <summary>
@@ -192,6 +194,12 @@ namespace GUI
                 writer.Close();
                 stopWatch.Reset();
             }
+        }
+
+        private void OpenSection_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Left.Checked = false;
+            Right.Checked = true;
         }
     }
 }

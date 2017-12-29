@@ -127,7 +127,8 @@
             // Right
             // 
             this.Right.AutoSize = true;
-            this.Right.Location = new System.Drawing.Point(71, 32);
+            this.Right.Checked = true;
+            this.Right.Location = new System.Drawing.Point(6, 32);
             this.Right.Name = "Right";
             this.Right.Size = new System.Drawing.Size(65, 17);
             this.Right.TabIndex = 19;
@@ -138,12 +139,10 @@
             // Left
             // 
             this.Left.AutoSize = true;
-            this.Left.Checked = true;
-            this.Left.Location = new System.Drawing.Point(6, 32);
+            this.Left.Location = new System.Drawing.Point(84, 33);
             this.Left.Name = "Left";
             this.Left.Size = new System.Drawing.Size(56, 17);
             this.Left.TabIndex = 20;
-            this.Left.TabStop = true;
             this.Left.Text = "Слева";
             this.Left.UseVisualStyleBackColor = true;
             // 
@@ -161,7 +160,6 @@
             this.groupBox1.TabIndex = 22;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Размеры окна";
-           // this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // Weight
             // 
@@ -257,6 +255,7 @@
             this.OpenSection.Name = "OpenSection";
             this.OpenSection.Size = new System.Drawing.Size(34, 21);
             this.OpenSection.TabIndex = 25;
+            this.OpenSection.SelectedIndexChanged += new System.EventHandler(this.OpenSection_SelectedIndexChanged);
             // 
             // FastVariable
             // 

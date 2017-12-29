@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
+
 namespace GUI
 {
-    
-    class CoordinatesGrid
+    public class CoordinatesGrid
     {
         /// <summary>
         ///     Объект с параметрами окна
@@ -19,31 +19,6 @@ namespace GUI
         /// </summary>
         private readonly Dictionary<int, Dictionary<string, double>> _grid =
             new Dictionary<int, Dictionary<string, double>>();
-
-        /// <summary>
-        ///     Геттер для сетки координат
-        /// </summary>
-        public Dictionary<int, Dictionary<string, double>> Grid => _grid;
-
-        /// <summary>
-        ///     Конструктор класса для сетки координат
-        /// </summary>
-        /// <param name="windowsParametrs"></param>
-        public CoordinatesGrid(WindowParametrs windowsParametrs)
-        {
-            _windowsParametrs = windowsParametrs;
-            _offset = 20;
-
-            InitSectionsCoordinations();
-
-            _grid.Add(5, InitOpenSection());
-
-            if (_windowsParametrs.OpenSection != 0)
-            {
-                _grid.Add(6, InitHandle());
-            }
-            
-        }
 
         /// <summary>
         ///     Инициализация координат для всех секций
@@ -74,7 +49,7 @@ namespace GUI
         /// <summary>
         ///     Инициализация координат для первой секции
         /// </summary>
-        /// <returns></returns>
+        /// <returns>возвращает координаты 1 секции</returns>
         private Dictionary<string, double> InitFirstSection()
         {
             return new Dictionary<string, double>
@@ -89,7 +64,7 @@ namespace GUI
         /// <summary>
         ///     Инициализация координат для второй секции
         /// </summary>
-        /// <returns></returns>
+        /// <returns>возвращает координаты 2 секции</returns>
         private Dictionary<string, double> InitSecondSection()
         {
             return new Dictionary<string, double>
@@ -104,7 +79,7 @@ namespace GUI
         /// <summary>
         ///     Инициализация координат для третьей секции
         /// </summary>
-        /// <returns></returns>
+        /// <returns>возвращает координаты 3 секции</returns>
         private Dictionary<string, double> InitThirdSection()
         {
             return new Dictionary<string, double>
@@ -121,7 +96,7 @@ namespace GUI
         /// <summary>
         ///     Инициализация координат для четвертой секции
         /// </summary>
-        /// <returns></returns>
+        /// <returns>возвращает координаты 4 секции</returns>
         private Dictionary<string, double> InitFourthSection()
         {
             return new Dictionary<string, double>
@@ -136,7 +111,7 @@ namespace GUI
         /// <summary>
         ///     Инициализация координат для ручки
         /// </summary>
-        /// <returns></returns>
+        /// <returns>возвращает координаты ручки выбранной секции</returns>
         private Dictionary<string, double> InitHandle()
         {
             var handleCoordinations = new Dictionary<string, double>();
@@ -171,11 +146,9 @@ namespace GUI
                     break;
                 case HandlePosition.Left:
                     handleCoordinations.Add("xStartPartOne", 
-                        openSectionCorrdinations["xStartExtrude"] / 2 
-                            - _offset * 2);
+                        openSectionCorrdinations["xStartExtrude"]/2-_offset*2);
                     handleCoordinations.Add("xStartPartTwo", 
-                        openSectionCorrdinations["xStartExtrude"] / 2 
-                            - _offset * 4);
+                        openSectionCorrdinations["xStartExtrude"]/2-_offset*4);
                     break;
             }
             
@@ -185,7 +158,7 @@ namespace GUI
         /// <summary>
         ///     Инициализация координат для открытой секции
         /// </summary>
-        /// <returns></returns>
+        /// <returns>возвращает координаты выбранной открытой секции</returns>
         private Dictionary<string, double> InitOpenSection()
         {
             var openSectionCoordinations = new Dictionary<string, double>();
@@ -277,5 +250,30 @@ namespace GUI
 
             return openSectionCoordinations;
         }
+
+        /// <summary>
+        ///     Конструктор класса для сетки координат
+        /// </summary>
+        /// <param name="windowsParametrs"></param>
+        public CoordinatesGrid(WindowParametrs windowsParametrs)
+        {
+            _windowsParametrs = windowsParametrs;
+            _offset = 20;
+
+            InitSectionsCoordinations();
+
+            _grid.Add(5, InitOpenSection());
+
+            if (_windowsParametrs.OpenSection != 0)
+            {
+                _grid.Add(6, InitHandle());
+            }
+
+        }
+
+        /// <summary>
+        ///     Геттер для сетки координат
+        /// </summary>
+        public Dictionary<int, Dictionary<string, double>> Grid => _grid;
     }
 }

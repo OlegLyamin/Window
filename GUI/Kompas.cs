@@ -71,9 +71,9 @@ namespace GUI
         ///     Построение ручки
         /// </summary>
         /// <param name="window"></param>
-        /// <param name="coordinatesGrid"></param>
-        /// <param name="windowPart"></param>
-        /// <param name="planeXoy"></param>
+        /// <param name="coordinatesGrid">координатная сетка</param>
+        /// <param name="windowPart">указатель на деталь</param>
+        /// <param name="planeXoy">координатная плоскость</param>
         private void DrawHandle(WindowParametrs window, 
             Dictionary<int, Dictionary<string, double>>
             coordinatesGrid, ksPart windowPart,
@@ -107,15 +107,15 @@ namespace GUI
         ///     Построение всех секций
         /// </summary>
         /// <param name="window"></param>
-        /// <param name="windowPart"></param>
-        /// <param name="planeXoy"></param>
-        /// <param name="height"></param>
-        /// <param name="width"></param>
-        /// <param name="weigth"></param>
-        /// <param name="coordinatesGrid"></param>
-        /// <param name="widthNotch"></param>
-        /// <param name="heighNotch"></param>
-        /// <param name="weigthNotch"></param>
+        /// <param name="windowPart">указатель на деталь</param>
+        /// <param name="planeXoy">координатная плоскость</param>
+        /// <param name="height">высота</param>
+        /// <param name="width">ширина</param>
+        /// <param name="weigth">глубина</param>
+        /// <param name="coordinatesGrid">координатная сетка</param>
+        /// <param name="widthNotch">ширина выреза</param>
+        /// <param name="heighNotch">высота выреза</param>
+        /// <param name="weigthNotch">глубина выреза</param>
         private void DrawAllSections(WindowParametrs window,
             ksPart windowPart, ksEntity planeXoy, int height, int width,
             int weigth, Dictionary<int, Dictionary<string,
@@ -123,21 +123,24 @@ namespace GUI
             int weigthNotch)
         {
             for (var i = 1; i <= window.SectionNumber; i++)
+            {
                 DrawSection(windowPart, planeXoy, height, width / 2.0,
                     weigth, coordinatesGrid[i]["xStartExtrude"],
                     coordinatesGrid[i]["yStartExtrude"],
                     coordinatesGrid[i]["xStartNotch"],
                     coordinatesGrid[i]["yStartNotch"],
                     widthNotch, heighNotch, weigthNotch);
+                
+            }
         }
 
         /// <summary>
         ///     Построение открытой секции
         /// </summary>
-        /// <param name="windowPart"></param>
-        /// <param name="planeXoy"></param>
-        /// <param name="coordinatesGrid"></param>
-        /// <param name="weigth"></param>
+        /// <param name="windowPart">указатель на деталь</param>
+        /// <param name="planeXoy">координатная плоскость</param>
+        /// <param name="coordinatesGrid">сетка координат</param>
+        /// <param name="weigth">ширина</param>
         /// <param name="window"></param>
         private void DrawOpenSection(ksPart windowPart, ksEntity planeXoy,
             Dictionary<int, Dictionary<string, double>> coordinatesGrid,
@@ -161,18 +164,18 @@ namespace GUI
         /// <summary>
         ///     Построение одной конкретной секции
         /// </summary>
-        /// <param name="windowPart"></param>
-        /// <param name="planeXoy"></param>
-        /// <param name="height"></param>
-        /// <param name="width"></param>
-        /// <param name="weigth"></param>
-        /// <param name="xStartExtrude"></param>
-        /// <param name="yStartExtrude"></param>
-        /// <param name="xStartNotch"></param>
-        /// <param name="yStartNotch"></param>
-        /// <param name="widthNotch"></param>
-        /// <param name="heighNotch"></param>
-        /// <param name="weigthNotch"></param>
+        /// <param name="windowPart">указатель на деталь</param>
+        /// <param name="planeXoy">координатная плоскость</param>
+        /// <param name="height">Высота</param>
+        /// <param name="width">Ширина</param>
+        /// <param name="weigth">Толщина</param>
+        /// <param name="xStartExtrude">Начало оси Х для выдавливания</param>
+        /// <param name="yStartExtrude">Начало оси Y для выдавливания</param>
+        /// <param name="xStartNotch">Начало оси Х для выреза</param>
+        /// <param name="yStartNotch">Начало оси Y для выреза</param>
+        /// <param name="widthNotch">ширина выреза</param>
+        /// <param name="heighNotch">высота выреза</param>
+        /// <param name="weigthNotch">глубина выреза</param>
         private void DrawSection(ksPart windowPart, ksEntity planeXoy, 
             double height, double width, double weigth,
             double xStartExtrude, double yStartExtrude, double xStartNotch, 
@@ -191,10 +194,10 @@ namespace GUI
         /// <summary>
         ///     Создание плоскости с отступом
         /// </summary>
-        /// <param name="windowPart"></param>
-        /// <param name="planeXoy"></param>
-        /// <param name="weigthNotch"></param>
-        /// <returns></returns>
+        /// <param name="windowPart">указатель на деталь</param>
+        /// <param name="planeXoy">координаты плоскости</param>
+        /// <param name="weigthNotch">Толщина выреза</param>
+        /// <returns>возвращение отступа плоскости</returns>
         private static ksEntity CreateOffsetPlane(ksPart windowPart,
             ksEntity planeXoy, double weigthNotch)
         {
@@ -214,13 +217,13 @@ namespace GUI
         /// <summary>
         ///     Выдавливание конкретной секции
         /// </summary>
-        /// <param name="height"></param>
-        /// <param name="width"></param>
-        /// <param name="weigth"></param>
-        /// <param name="windowPart"></param>
-        /// <param name="planeXoy"></param>
-        /// <param name="xStart"></param>
-        /// <param name="yStart"></param>
+        /// <param name="height">Высота</param>
+        /// <param name="width">Ширина</param>
+        /// <param name="weigth">Толщина</param>
+        /// <param name="windowPart">Часть окна</param>
+        /// <param name="planeXoy">Плоскость</param>
+        /// <param name="xStart">Начало оси Х</param>
+        /// <param name="yStart">Начало оси Y</param>
         /// <param name="type"></param>
         private void ExtrudeOdject(double height, double width,
             double weigth, ksPart windowPart, ksEntity planeXoy,
@@ -240,12 +243,12 @@ namespace GUI
 
         /// <summary>
         /// </summary>
-        /// <param name="doc2D"></param>
-        /// <param name="xStart"></param>
-        /// <param name="yStart"></param>
-        /// <param name="heigth"></param>
-        /// <param name="width"></param>
-        /// <param name="ang"></param>
+        /// <param name="doc2D">создание документа в компасе</param>
+        /// <param name="xStart">Начало оси Х</param>
+        /// <param name="yStart">Начало оси Y</param>
+        /// <param name="heigth">высота</param>
+        /// <param name="width">ширина</param>
+        /// <param name="ang">угол</param>
         private void DrawRectangle(ksDocument2D doc2D, double xStart,
             double yStart, double heigth,
             double width, double? ang)
@@ -269,10 +272,10 @@ namespace GUI
         /// <summary>
         ///     метод выреза/выдавливания фигуры
         /// </summary>
-        /// <param name="part"></param>
-        /// <param name="sketch"></param>
-        /// <param name="heigth"></param>
-        /// <param name="type"></param>
+        /// <param name="part">Часть эскиза</param>
+        /// <param name="sketch">Эскиз</param>
+        /// <param name="heigth">Высота</param>
+        /// <param name="type">принимаемое значение</param>
         private static void Extrusion(ksPart part, ksEntity sketch, 
             double heigth, Obj3dType type)
         {

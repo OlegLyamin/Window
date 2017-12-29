@@ -2,7 +2,7 @@
 
 namespace GUI
 {
-    class WindowParametrs
+    public class WindowParametrs
     {
         /// <summary>
         /// объект высоты
@@ -92,7 +92,7 @@ namespace GUI
         /// <param name="lengthWidth">ширина</param>
         /// <param name="lengthWeight">толщина</param>
         /// <param name="sectionNumber">номер секции</param>
-        /// <param name="opensection"></param>
+        /// <param name="opensection">номер открываемой секции</param>
         public WindowParametrs(int lengthHeight, int lengthWidth,
             int lengthWeight, int sectionNumber, int opensection)
         {
